@@ -210,7 +210,6 @@ body {
 	display: flex;
 	overflow: hidden;
 	list-style: none;
-	padding-left:0
 }
 
 .slide {
@@ -292,6 +291,7 @@ body {
 }
 
 .foot p{
+	flex-basis: 200px;
 	color: white;
 	font-size: 120%;
 	width: 100%;

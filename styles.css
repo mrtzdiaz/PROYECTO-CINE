@@ -1,0 +1,345 @@
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+
+	15% { transform: translateX(-25rem); }
+	35% { transform: translateX(-25rem); }
+
+	40% { transform: translateX(-50rem); }
+	55% { transform: translateX(-50rem); }
+
+	60% { transform: translateX(-75rem); }
+	75% { transform: translateX(-75rem); }
+
+	80% { transform: translateX(-100rem); }
+	95% { transform: translateX(-100rem); }
+
+	96% { transform: translateX(-100rem); }
+	100% { transform: translateX(-100rem); }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	margin: 0px 0px 0px 0px;
+}
+
+/* Barra de Menu */
+
+.menu {
+	display: grid;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 15;
+}
+
+.navegacion{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: rgb(26, 26, 26);
+	z-index: 20;
+}
+
+.navegacion h1{
+	color: white;
+}
+
+.navegacion img{
+	width: 6rem;
+}
+
+.boton{
+	height: 40%;
+	border-radius: 10px;
+	border: 3px solid white;
+	background-color: rgb(26, 26, 26);
+}
+
+.boton a{
+	text-decoration: none;
+	color: white;
+}
+
+.boton:hover{
+	background-color: white;
+}
+
+.boton:hover a{
+	color: rgb(26, 26, 26);
+}
+
+
+/*REDIRECCIÓN A COMBOS*/
+
+.promocional{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	background-image: url(./img/PALOMITAS.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.promocional p{
+	text-align: center;
+	font-size: 60px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	z-index: 15;
+	color: white;
+	background-color: rgba(26, 26, 26, .5);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.promocional button{
+	z-index: 15;
+	background-color: rgb(226, 226, 0);
+	border-radius: 10px;
+	top: 60%;
+	border: rgba(0, 0, 0, 1);
+	margin-bottom: 10%;
+}
+
+.promocional button a{
+	text-decoration: none;
+	text-align: center;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 40px;
+	color: rgb(26, 26, 26);
+}
+
+.promocional button:hover{
+	background-color: rgb(26, 26, 26);
+}
+
+.promocional button:hover a{
+	color: rgb(226, 226, 0);;
+}
+
+/*CARTELERA*/
+
+.cartelera{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 20px 20px 0px 20px;
+	z-index: 10;
+}
+
+.titulos{
+	width: 100%;
+	font-size: 250%;
+}
+
+#titulo_uno::after{
+	content: "🔥";
+}
+
+#titulo_uno::before{
+	content: "🔥";
+}
+
+.container img{
+	width: 100%;
+	border-radius: 30px 30px 0px 0px;
+}
+
+#one{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	border-radius: 30px 30px 30px 30px;
+	margin: 1vw;
+	background-color: rgb(26, 26, 26);
+	z-index: 10;
+}
+
+#one h3{
+	flex-shrink: 10;
+	color: rgb(244, 244, 242);
+}
+
+#one p{
+	color: rgb(244, 244, 242);
+}
+
+#one button{
+	background-color: rgb(26, 26, 26);
+	border-radius: 10px;
+	outline: dotted white;
+	z-index: 10;
+}
+
+#one button:hover{
+	background-color: white;
+	border-radius: 10px;
+}
+
+#one button:hover a{
+	text-decoration: none;
+	color: rgb(26, 26, 26);
+}
+
+#one a{
+	text-decoration: none;
+	color: white;
+}
+
+ 
+/* ANIMACIÓN */
+
+.wrapper {
+	max-width: 50rem;
+	margin: 0 auto;
+}
+
+.slider {
+	position: relative;
+}
+
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	list-style: none;
+	padding-left:0
+}
+
+.slide {
+	width: 70vw;
+	flex-shrink: 0;
+	animation-name: slide;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.slides:hover .slide {
+	animation-play-state: paused;
+}
+
+.slide img {
+	width: 25rem;
+	vertical-align: right;
+}
+
+.slide a {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+.slide:target {
+	animation-name: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+}
+
+.slider-controler {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+.slider-controler li {
+	margin: 0 0.5rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+	.slide {
+		width: 25rem;
+	}
+	
+}
+
+/* Pie de pagina */
+
+.foot{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(26, 26, 26);
+	height: 100px;
+	gap: 30px;
+}
+
+.foot p{
+	color: white;
+	font-size: 120%;
+	width: 100%;
+}
+
+.redes{
+	flex-basis: 300px;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+}
+
+.redes img{
+	width: 60px;
+	gap: 10px;
+}
+
+
+/*Responsivo*/
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto;
+}
+.container{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	z-index: 10;
+}
+
+@media(min-width: 768px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto;
+	}
+	.container{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media(min-width: 900px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto;
+	}
+	.container{
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
+}

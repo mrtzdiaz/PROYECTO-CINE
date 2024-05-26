@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./form_styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bienvenido</h1>
+        <p>¡Para adquirir tus boletos completa el formulario!</p>
+        </div>
+
+        <form class="form">
+            <h2>Cuenta</h2>
+            <label>Tu nombre:</label>
+            <input type="text" placeholder="Fulanita">
+            <br>
+            <label>Tu apellido:</label>
+            <input type="text" placeholder="Pérez">
+            <br>
+            <label>Ingresa tu email:</label>
+            <input type="email" placeholder="fulanitaperez@me.com">
+            <br>
+            <label>Selecciona tu película</label>
+            <select name="horario">
+                <option value="peliuno">Desafiantes</option>
+                <option value="pelidos">Garfield: Fuera de casa</option>
+                <option value="pelitres">Guerra Civil</option>
+                <option value="pelicuatro">Jugaremos En El Bosque</option>
+                <option value="pelicinco">Profesión Peligro</option>
+            </select>
+            <div class="seleccion">
+                <div>
+                    <label>Selecciona el horario de tu interés</label>
+                    <input type="time">
+                </div>
+                <div>
+                    <label>Ingresa número de boletos:</label>
+                    <input type="number">
+                </div>
+            </div>
+            <h2>Pago</h2>
+            <label">Nombre en la tarjeta</label>
+            <input type="text" placeholder="Fulanita Pérez">
+            <br>
+            <label>Número de tarjeta</label>
+            <input type="text" name="nombretarjeta" placeholder="11-2233-4444">
+            <label>Mes y Año de Expiración</label>
+            <input type="month" name="mes" placeholder="Septiembre">
+                <input style="width: auto;" type="checkbox" name="terminos" value="acepto">
+                <label for="terminos">Acepto términos y condiciones</label>
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+</body>
+
+</html>
